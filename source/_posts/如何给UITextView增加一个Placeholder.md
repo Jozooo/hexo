@@ -1,4 +1,4 @@
-title: 如果给UITextView增加一个Placeholder
+title: 如何给UITextView增加一个Placeholder
 categories: iOS
 date: 2014-12-17 22:15:12
 tags: [UITextView, Placeholder, iOS]
