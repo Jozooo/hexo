@@ -1,0 +1,132 @@
+# when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -> "archives" )
+menu:
+  home: /
+  archives: /archives
+  categories: /categories
+  tags: /tags
+  about: /about/index.html
+  #commonweal: /404.html
+  
+
+# Place your favicon.ico to /source directory.
+favicon: /favicon.ico
+
+# Set default keywords (Use a comma to separate)
+keywords: ""
+
+# Specify the date when the site was setup
+since: 2011
+
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site's feed link.
+# Set rss to specific value if you have burned your feed already.
+rss:
+
+# 图标和字体
+# Icon fonts
+# Place your font into next/source/fonts, specify directory-name and font-name here
+# Avialable: default | linecons | fifty-shades | feather
+#icon_font: default
+#icon_font: fifty-shades
+#icon_font: feather
+icon_font: linecons
+
+
+
+# 代码高亮主题
+# Available value: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: night
+
+
+# 设置头像
+avatar: http://img.blog.csdn.net/20151113121050259
+
+# 介绍信息
+author: Kohler
+description:  To be a quiet Coder.
+
+
+# Social links
+social:
+  github: https://github.com/i-kohler
+  weibo: http://weibo.com/249559801
+  #douban: http://douban.com/people/your-user-name
+  zhihu: http://www.zhihu.com/people/ikohler
+
+# Social Icons
+social_icons:
+  enable: true
+  # Icon Mappings
+  github: github
+  twitter: twitter
+  weibo: weibo
+  zhihu: zhihu
+
+
+# title, chinese available
+links_title: 
+# links
+links:
+  Maxxies: http://dear.wordpress.com.cn/
+
+# MathJax Support
+mathjax: true
+
+
+# Schemes
+scheme: Mist
+
+
+# 侧边栏的显示模式
+#  - post    expand on posts automatically. Default.
+#  - always  expand for all pages automatically
+#  - hide    expand only when click on the sidebar toggle icon.
+#sidebar: post
+#sidebar: always
+sidebar: post
+
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+
+# Automatically add list number to toc.
+toc_list_number: true
+
+
+# Automatically Excerpt
+auto_excerpt:
+  enable: false
+  length: 150
+  
+
+# Use Lato font
+# Note: this option is avialable only when the language is not `zh-Hans`
+use_font_lato: true
+
+# Make duoshuo show UA
+# user_id must NOT be null when admin_enable is true!
+# you can visit http://dev.duoshuo.com get duoshuo user id.
+duoshuo_info:
+  ua_enable: true
+  admin_enable: false
+  user_id: 0
+
+## DO NOT EDIT THE FOLLOWING SETTINGS
+## UNLESS YOU KNOW WHAT YOU ARE DOING
+
+# Use velocity to animate everything.
+use_motion: true
+
+# Fancybox
+fancybox: true
+
+# Static files
+vendors: vendors
+css: css
+js: js
+images: images
+
+# Theme version
+version: 0.4.5.1
