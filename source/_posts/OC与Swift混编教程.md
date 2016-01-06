@@ -17,6 +17,8 @@ tags: [Objective-C, Swift, 混编, Xcode]
 <!--more-->
 ![](http://img.blog.csdn.net/20160104165138216)
 
+> ##### 如果没有提示这一步，可以自己手动设置
+![](http://img.blog.csdn.net/20160106102111878)
 
 ### 3. 这时会在工程里看到下图这样一个头文件  
 
