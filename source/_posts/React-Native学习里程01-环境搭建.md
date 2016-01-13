@@ -6,7 +6,7 @@ tags: [React Native, JavaScript]
 
 #### 1.安装node.js
 
-- nodejs版本需要在4.0以上
+- nodejs版本需要在4.0以上,官网下载安装即可[http://nodejs.cn](http://nodejs.cn)
 
 
 #### 2.安装Homebrew
@@ -30,7 +30,7 @@ brew install flow
 
 #### 5.创建项目
 
-- 使用react-native init <Proj Name>来创建项目
+- 使用react-native init "Proj Name" 来创建项目
 
 因为npm的registry是在国外，访问很慢，甚至可能无法创建完成。
 所以需要设置以下两条来将镜像指向国内的镜像（第二条常被遗漏）
@@ -46,8 +46,10 @@ npm config set disturl https://npm.taobao.org/dist
 
 
 #### 6.项目的运行
-初次安装，对于IOS设备来说，可以使用Xcode打开项目目录下的ios目录中的ios的项目文件（*.xcodeproj）,然后点击运行，则可以运行。
-对于Android设备来说，则可以在项目的根目录使用react-native run-android命令直接运行。
+- iOS，使用Xcode打开项目目录下的iOS目录中的iOS的项目文件（*.xcodeproj）,点击运行即可。
+- Android，在项目的根目录使用`react-native run-android`命令直接运行。
+
+
 
 > *PS*: 对于在本机的模拟器来说，直接运行是没有问题的，但是如果要在手机上运行的话，则需要改变ip地址才行。对于IOS项目来说，可以在AppDelegate.m文件中的
 jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
