@@ -78,9 +78,36 @@ React Native 的项目可以在Chrome上进行调试。
 
 如果因为条件限制不能访问Chrome的应用商店，可以在[https://github.com/facebook/react-devtools/releases](https://github.com/facebook/react-devtools/releases)上下载到工具。
 
-<!--安装完调试工具之后，可以在运行的设备上摇一摇，然后选择Debug in Chrome即可开始调试。调试的方法和调试网页的方法一样，可以打断点，可以看输出，都很方便。
+安装完调试工具之后，可以在运行的设备上摇一摇，然后选择Debug in Chrome即可开始调试。调试的方法和调试网页的方法一样，可以打断点，可以看输出，都很方便。
 
-PS：这个地方有个小坑。如果开启了Debug in Chrome 的设备在运行的时候，出现了 Runtime is not ready 的错误，此时，是因为你的Chrome没有打开调试的网页。可以选择打开调试的网页（http://localhost:8081/debugger-ui），或者关闭设备的Debug in Chrome 模式即可、如果Chrome无法打开上述的调试网页，请检查你的网络，是否开了VPN或者各种网络代理之类的。而且，localhost是可能会随着服务器的地址变化而发生改变，请注意保持一致。
+<!--PS：这个地方有个小坑。如果开启了Debug in Chrome 的设备在运行的时候，出现了 Runtime is not ready 的错误，此时，是因为你的Chrome没有打开调试的网页。可以选择打开调试的网页（http://localhost:8081/debugger-ui），或者关闭设备的Debug in Chrome 模式即可、如果Chrome无法打开上述的调试网页，请检查你的网络，是否开了VPN或者各种网络代理之类的。而且，localhost是可能会随着服务器的地址变化而发生改变，请注意保持一致。
 ![](http://img.blog.csdn.net/20160113161927806)-->
+
+#### 8. 遭遇的问题
+
+运行时会自动弹出终端，而如果终端上显示如下文字，就意味着并未正常运行
+
+```
+Error building DependencyGraph:
+ Error: Watcher took too long to load
+Try running `watchman version` from your terminal
+https://facebook.github.io/watchman/docs/troubleshooting.html
+    at [object Object]._onTimeout (index.js:103:16)
+    at Timer.listOnTimeout (timers.js:92:15)
+~
+Process terminated. Press <enter> to close the window
+```
+
+很显然是watchman出了问题，那么在terminal里运行如下指令
+
+```
+brew uninstall watchman
+brew install --HEAD watchman
+```
+如果仍然不行，再试试将这个文件中的MAX_WAIT_TIME值改得更大一些，文件路径是`node_modules\react-native\packager\react-packager\src\DependencyResolver\FileWatcher\index.js`或`node_modules/react-native/packager/react-packager/src/FileWatcher/index.js`
+
+再cmd + R 运行程序，Congratulation！~到此环境就搭建完成啦。
+
+> 更多问题整理移步[React Native常见问题（12月24日更新）-- 罗攻的简书](http://www.jianshu.com/p/fa0c19a31656)，希望可以帮到你。
 
 That's all, thank you.
