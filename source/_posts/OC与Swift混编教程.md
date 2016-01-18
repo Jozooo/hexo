@@ -36,4 +36,4 @@ tags: [Objective-C, Swift, 混编, Xcode]
 如下图所示，这步之后你的.m文件就可以随便调用swift文件了。
 ![](http://img.blog.csdn.net/20160104165221793)
 
-其实如果你设置的Defines Module = YES了，xcode就会默认生成Product Module Name - swift.h这样一个头文件，这个头文件下会有你所有.swift文件的.h信息。 
+其实如果你设置的`Defines Module = YES`了，xcode就会默认生成`"Product Module Name"-swift.h`这样一个头文件，这个头文件下会有你所有.swift文件的.h信息。 
