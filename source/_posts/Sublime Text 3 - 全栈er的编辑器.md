@@ -1,5 +1,5 @@
-title: Sublime Text 3
-categories: Others
+title: Sublime Text 3 - 全栈er的编辑器
+categories: 必先利其器
 date: 2015-12-28 11:58:57
 tags: [JavaScript, Sublime Text]
 ---
