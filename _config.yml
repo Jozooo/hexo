@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 科勒的小刀
-subtitle: be a quiet man
-description: iOS | life
-author: Kohler Chen
+title: Jozo的博客
+# subtitle:
+# description: iOS | life
+author: Jozo.Chan
 language: zh-Hans
-email: ikohler7c@gmail.com
+email: jozochan@gmail.com
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.kohmax.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory
@@ -66,7 +66,7 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 30
 pagination_dir: page
 
 duoshuo_shortname: kohmax
@@ -75,17 +75,33 @@ swiftype_key: wyXNFUWN_N8FU9Bcysd3
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
-exclude_generator:
-plugins:
+
+Plugins:
 - hexo-generator-feed
 - hexo-generator-sitemap
 
-# Deployment  站点部署到github要配置这里, 非常重要
+theme: next 5.x
+exclude_generator:
+
+
+
+
+
+
+# Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git    #部署类型, 本文使用Github
-  repository: git@gitcafe.com:ikohler/ikohler.git  #部署的仓库的SSH
-  branch: gitcafe-pages  #部署分支,一般使用master主分支
-plugins: 
-- hexo-generator-feed   #此插件用于RSS订阅, 以后有时间再介绍
+  repository: git@github.com:chenzht/chenzht.github.io.git  #部署的仓库的SSH
+  branch: master  #部署分支,一般使用master主分支
+
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+
+    #sitemap
+sitemap:
+  path: sitemap.xml
